@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.overlay {
+  background: linear-gradient(89.6deg, #0b0b0c 30.69%, rgba(0, 0, 0, 0.2) 99.68%)
+}
