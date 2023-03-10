@@ -6,7 +6,7 @@ import SectionWrapper from "../wrappers/SectionWrapper";
 const HowToSearch = () => {
     return (
         <SectionWrapper>
-               <section className="px-8 py-3  flex flex-col items-center gap-5 xl:mx-auto xl:max-w-[80%] mt-44">
+               <section className="px-8 py-3 mt-10 flex flex-col items-center gap-5 xl:mx-auto xl:max-w-[80%] xl:mt-44">
             <h2 className="font-bold text-dark-blue text-center text-4xl">How to Search</h2>
             <p className="text-gray-text md:w-3/5 text-center tracking-[0.8px]">Easy Search allows you to upload the details of your lost document and search it for
                 you in just 3 easy and quick ways </p>

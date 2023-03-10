@@ -5,7 +5,7 @@ import SectionWrapper from "../wrappers/SectionWrapper";
 const Team = () => {
     return ( 
         <SectionWrapper>
-            <section className="py-44 grid grid-cols-2 gap-5 px-80">
+            <section className="py-44 grid grid-cols-1 md:grid-cols-2 gap-5 xl:px-80">
 
                 {team.map((member, index) => {
                     return(
