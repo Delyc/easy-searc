@@ -1,6 +1,6 @@
 interface Props{
     className ?: string,
-    handleClick ?: () => void,
+    handleClick ?: any,
     text ?: string,
 }
 

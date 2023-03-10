@@ -28,3 +28,42 @@ export const Linkedin = () => {
         <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#0A66C2" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z" /></svg>
     )
 }
+
+
+export const ProfileIcon = () => {
+    return (
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 7.063C16.5 10.258 14.57 13 12 13c-2.572 0-4.5-2.742-4.5-5.938C7.5 3.868 9.16 2 12 2s4.5 1.867 4.5 5.063zM4.102 20.142C4.487 20.6 6.145 22 12 22c5.855 0 7.512-1.4 7.898-1.857a.416.416 0 0 0 .09-.317C19.9 18.944 19.106 15 12 15s-7.9 3.944-7.989 4.826a.416.416 0 0 0 .091.317z" fill="#7993EE" /></svg>
+    )
+}
+
+// export const CardIcon = () => {
+//     return (
+//         <svg width="20px" height="20px" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#4d4d4d;}</style></defs><title /><path className="cls-1" d="M28,6H4A2,2,0,0,0,2,8V24a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V8A2,2,0,0,0,28,6Zm0,18H4V8H28Z" /><path class="cls-1" d="M18,14h7a1,1,0,0,0,0-2H18a1,1,0,0,0,0,2Z" /><path class="cls-1" d="M18,18h4a1,1,0,0,0,0-2H18a1,1,0,0,0,0,2Z" /><path class="cls-1" d="M7,21a1,1,0,0,0,1-1c0-.28.88-.89,1.28-1l.11,0a2.3,2.3,0,0,0,1.1-.58,2.2,2.2,0,0,0,1,0,2.3,2.3,0,0,0,1.1.58l.07,0c.43.16,1.28.77,1.32,1.05a1,1,0,0,0,2,0c0-1.77-2.37-2.86-2.72-3h0A5,5,0,0,0,14,14a3.16,3.16,0,0,0-3-3,3.16,3.16,0,0,0-3,3,5,5,0,0,0,.74,3h0C8.37,17.14,6,18.23,6,20A1,1,0,0,0,7,21Zm4-8a1.17,1.17,0,0,1,1,1,2.69,2.69,0,0,1-.71,2.29.41.41,0,0,1-.58,0A2.68,2.68,0,0,1,10,14,1.17,1.17,0,0,1,11,13Z" /></svg>
+//     )
+// }
+
+export const LocationIcon = () => {
+    return (
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="10" r="3" stroke="#7993EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19 9.75C19 15.375 12 21 12 21C12 21 5 15.375 5 9.75C5 6.02208 8.13401 3 12 3C15.866 3 19 6.02208 19 9.75Z" stroke="#7993EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+
+export const RegDocIcon = () => {
+    return (
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 12L10.8 16L9 14.2857M13 3H5V5M13 3H14L19 8V9M13 3V7C13 8 14 9 15 9H19M19 9V12M5 10V21H19V16" stroke="#7993EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+export const AtIcon = () => {
+    return(
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16" stroke="#7993EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+    )
+}
