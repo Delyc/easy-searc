@@ -1,6 +1,6 @@
 import { ProfileIcon, PhoneIcon, AtIcon, LocationIcon } from "../svgs/Icons"
 
-export const  formItems = [
+export const formItems = [
     {
         icon: <ProfileIcon />,
         name: "names",
@@ -37,8 +37,23 @@ export const  formItems = [
         placeHolder: "Location",
         type: "text"
     },
-    
-    
-    
-    
+
+]
+
+
+export const navItems = [
+    {
+        name: "Home",
+        path: "/"
+    },
+    {
+        name: "Available doc",
+        path: "/available-docs"
+    },
+    {
+        name: "Declare doc",
+        path: "/declare-doc"
+    },
+
+
 ]
