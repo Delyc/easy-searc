@@ -3,7 +3,7 @@ interface Props{
     handleClick ?: any,
     text ?: string,
     icon ? : any,
-    hasIcon : boolean
+    hasIcon ?: boolean
 }
 
 const Button = ({className, text, handleClick, icon, hasIcon} : Props) => {
