@@ -44,16 +44,16 @@ const DeclareDoc = () => {
         <>
             <Navbar />
             <SectionWrapper>
-                <section className="flex flex-col lg:flex lg:flex-row lg:justify-between lg:items-center mb-20 mt-44 lg:px-32">
-                    <div className="flex-col-reverse flex lg:flex-col gap-5  items-center">
-                        <div className=" flex flex-col lg:flex lg:flex-row gap-2 items-center w-full justify-center">
-                            <Image src={man} alt="man icon" className="h-[60vh] w-full lg:w-[30rem]" />
+                <section className="flex flex-col md:flex md:flex-row xl:justify-between lg:items-center mt-44 mb-20 md:mt-60 xl:mt-44 xl:px-32">
+                    <div className="flex-col-reverse flex xl:flex-col gap-5  items-center">
+                        <div className=" flex flex-col md:flex-col-reverse lg:flex lg:flex-row gap-2 items-center w-full justify-center">
+                            <Image src={man} alt="man icon" className="lg:h-[60vh] w-full lg:w-[30rem]" />
                             <div className="animate-bounce flex gap-2 items-center">Fill out the form <SideArrow /> </div>
                         </div>
                         <h1 className="text-dark-blue font-bold text-2xl w-4/5 text-center">Lost your document? <span className="text-primary-blue">No Worries!</span></h1>
                         <p>Lost it ~ Declare it ~ get it</p>
                     </div>
-                    <form className="flex flex-col gap-2 lg:w-2/5">
+                    <form className="flex flex-col gap-2 md:w-1/2 lg:w-2/5">
                         {formItems.map((formItem, index) => {
                             return (
                                 <div key={index} className="flex items-center px-5 rounded-md border border-gray-border">
