@@ -21,7 +21,7 @@ export default interface DocumentInterface{
 export const availableDocsSlice = createApi({
   reducerPath: 'availableDocsSlice',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:7000/api',
+    baseUrl: 'https://easy-search-api.onrender.com/api',
   }),
   endpoints: (builder) => ({
     availableDocs: builder.query<DocumentInterface, void>({

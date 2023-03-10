@@ -10,7 +10,7 @@ const AvailableDocs = () => {
     const { data, isLoading, isError } = useAvailableDocsQuery()
   const [enteredWord, setEnteredWord] = useState("");
 
-    console.log(data)
+    console.log("data", data)
     const clearInpunt = () => {
         setEnteredWord("");
       };
@@ -64,7 +64,7 @@ const AvailableDocs = () => {
 
             {isLoading && <h1>Loading ....</h1>}
             {isError && <h1>Something went wrong</h1>}
-            <section className="grid grid-cols-3 gap-10 ">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
             {data?.data.allDocuments.map((doc, index) => {
                 return(
                     <Doc key={index} cardNumber={doc.cardNumber} cardType={doc.cardType} id={""} location={doc.location} nameOnDoc={doc.nameOnDoc} orgDocument={doc.orgDocument} phoneEMail={doc.phoneEMail} reqDocument={doc.reqDocument} />

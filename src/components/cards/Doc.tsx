@@ -6,7 +6,7 @@ import DocumentInterface from "@/services/docsApiSlice";
 import Button from "../ui/Button";
 const Doc = ({ nameOnDoc, location, phoneEMail, cardNumber, cardType, reqDocument }: any) => {
     return (
-        <div className="shadow-xl px-10 py-10 flex flex-col gap-5 rounded-xl">
+        <div className="shadow-xl px-4 xl:px-10 py-10 flex flex-col gap-5 rounded-xl">
 
             <div className="flex flex-col gap-2">
                 <p className="text-dark-blue font-semibold tracking-[1px] uppercase">Document details:</p>
