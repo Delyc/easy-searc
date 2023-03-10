@@ -28,10 +28,7 @@ const DeclareDoc = () => {
         await declareLostDoc(declareDoc).unwrap().then((payload) => {
             console.log("payload", payload)
             alerts()
-            
-            // toast.success("Docu")
-            // Document declared successfully
-            // If it is found you will be notified
+
         })
             .catch((err) => {
                 console.log(err)
