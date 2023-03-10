@@ -2,8 +2,11 @@ import { useDeclareLostDocMutation } from "@/services/docsApiSlice";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Navbar from "../layouts/Navbar";
+import { SideArrow } from "../svgs/Icons";
 import Button from "../ui/Button";
 import alerts from "../utils/Alert";
+import lostMan from '../../../public/assets/lost-man.svg'
+import Image from "next/image";
 import SectionWrapper from "../wrappers/SectionWrapper";
 const DeclareDoc = () => {
 
@@ -36,27 +39,34 @@ const DeclareDoc = () => {
 
     }
     return (
+        <>
+            <Navbar />
+            <SectionWrapper>
+                <section className="flex justify-between items-center  mt-44 px-40">
+                    <div className="flex flex-col gap-5 px-10 items-center">
+                        <div className=" flex gap-2 items-center w-full justify-center">
+                            <Image src={lostMan} alt="man icon" className="h-[60vh] w-[30rem]" />
+                            <div className="animate-bounce flex gap-2 items-center">Fill out the form <SideArrow /> </div>
+                       
+                        </div>
+                        <h1 className="text-dark-blue font-bold text-2xl w-4/5 text-center">Lost your document? <span className="text-primary-blue">No Worries!</span></h1>
 
-        <SectionWrapper>
-            <section className="flex justify-between items-center">
-                <div>
-                    <h1>Lost your document? <span>No Worries!</span></h1>
-                    <p>With our e~Search, you can get bac your document in no time</p>
-                    <p>Lost it ~ Claim it ~ get it</p>
+                        <p>Lost it ~ Declare it ~ get it</p>
 
-                    <div>Fill out the form</div>
-                </div>
-                <form className="flex flex-col gap-2 w-2/5">
-                    <input name="names" onChange={inputHandler} placeholder="Your names" type="text" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
-                    <input name="phone" onChange={inputHandler} placeholder="Phone number" type="number" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
-                    <input name="email" onChange={inputHandler} placeholder="Email" type="email" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
-                    <input onChange={inputHandler} name="cardType" placeholder="Card type" type="text" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
-                    <input onChange={inputHandler} name="cardNumber" placeholder="Card Number" type="number" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
-                    <input onChange={inputHandler} name="location" placeholder="Location" type="text" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
-                    <Button text={isLoading ? "Sedning ..." : "Send"} className="rounded text-white" handleClick={handleSubmit} />
-                </form>
-            </section>
-        </SectionWrapper>
+                    </div>
+                    <form className="flex flex-col gap-2 w-2/5">
+                        <input name="names" onChange={inputHandler} placeholder="Your names" type="text" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
+                        <input name="phone" onChange={inputHandler} placeholder="Phone number" type="number" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
+                        <input name="email" onChange={inputHandler} placeholder="Email" type="email" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
+                        <input onChange={inputHandler} name="cardType" placeholder="Card type" type="text" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
+                        <input onChange={inputHandler} name="cardNumber" placeholder="Card Number" type="number" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
+                        <input onChange={inputHandler} name="location" placeholder="Location" type="text" className="w-full  p-3 bg-white rounded-md border border-gray-border  text-gray-text" />
+                        <Button text={isLoading ? "Sedning ..." : "Send"} className="rounded text-white" handleClick={handleSubmit} />
+                    </form>
+                </section>
+            </SectionWrapper>
+        </>
+
     );
 }
 
