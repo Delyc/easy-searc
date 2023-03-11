@@ -66,16 +66,16 @@ const RegisterAdmin = () => {
         <>
         <Navbar />
         <SectionWrapper>
-            <section className="mt-44 flex justify-between px-20 mb-28">
+            <section className="mt-44 md:flex md:flex-row justify-between lg:px-20 mb-28">
             <div className="">
                 <h1 className="text-gray-text tracking-[1px]">Welcome to</h1>
                 <h1 className="text-5xl text-primary-blue font-medium"> e~Search!</h1>
-                <div className="relative  w-[30rem] h-[30rem]">
+                <div className="relative h-[15rem] w-full md:w-[20rem] md:h-[20rem]  lg:w-[30rem] lg:h-[30rem]">
                 <Image src={register} alt="man icon" layout="fill" className="absolute"/>
 
                 </div>
             </div>
-            <form className="flex flex-col gap-3 bg-white shadow-xl px-16 py-16 mt-5 w-2/5">
+            <form className="flex flex-col gap-3 bg-white shadow-xl px-4 lg:px-16 py-16 mt-5 lg:w-2/5">
                 {orgRegisterForm.map((input, index) => {
                     return(
                         <div key={index} className="flex items-center px-5 rounded-md border border-gray-border">

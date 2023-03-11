@@ -55,7 +55,7 @@ const DocSkeleton = () => {
         
         
         
-        <Button text="Claim" className="text-white rounded py-2 mt-5 w-1/2" />
+        {/* <Button text="Claim" className="text-white rounded py-2 mt-5 w-1/2" /> */}
         </div>
      );
 }

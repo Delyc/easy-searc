@@ -55,7 +55,7 @@ const Doc = ({ nameOnDoc, location, phoneEMail, cardNumber, cardType, reqDocumen
 
 
 
-            <Button text="Claim" className="text-white rounded py-2 mt-5 w-1/2" />
+            {/* <Button text="Claim" className="text-white rounded py-2 mt-5 w-1/2" /> */}
         </div>
     );
 }
