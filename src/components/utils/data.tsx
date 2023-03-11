@@ -151,3 +151,23 @@ export const orgRegisterForm = [
     },
 
 ]
+
+
+export const orgLoginForm = [
+
+    {
+        icon: <AtIcon />,
+        name: "Organisation Email",
+        placeHolder: "Your Email",
+        type: "email"
+    },
+
+
+    {
+        icon: <LocationIcon />,
+        name: "password",
+        placeHolder: "Password",
+        type: "password"
+    },
+
+]
