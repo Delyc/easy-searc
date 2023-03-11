@@ -1,4 +1,4 @@
-import { ProfileIcon, PhoneIcon, AtIcon, LocationIcon, RegDocIcon } from "../svgs/Icons"
+import { ProfileIcon, PhoneIcon, AtIcon, LocationIcon, RegDocIcon, DashboardIcon, TwoDocumentsIcon, AddDocument } from "../svgs/Icons"
 
 export const formItems = [
     {
@@ -62,17 +62,17 @@ export const navItems = [
 export const sidebarItems = [
     {
         path: "/dashboard",
-        icon: "",
+        icon: <DashboardIcon />,
         title: "Dashboard",
       },
       {
         path: "/all-documents",
-        icon: "",
+        icon: <TwoDocumentsIcon />,
         title: "All Documents",
       },
       {
         path: "/add-doc",
-        icon: "",
+        icon: <AddDocument />,
         title: "Add Lost Document",
       },
 ]

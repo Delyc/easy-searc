@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { userLogin } from '../../../redux/actions/authActions'
 import { useRouter } from "next/router";
 import { ThunkDispatch } from 'redux-thunk';
+import { toast } from "react-toastify";
 
 const RegisterAdmin = () => {
     const initialData = {
@@ -24,7 +25,10 @@ const RegisterAdmin = () => {
     const dispatch: ThunkDispatch<any, void, any> = useDispatch()
     useEffect(() => {
         // redirect authenticated user to profile screen
-        if (userInfo) router.push('/')
+        if (userInfo) {
+            toast.info("Logged in successfully")
+            router.push('/')
+        }
         // redirect user to login page if registration was successful
     }, [router, userInfo, success])
 

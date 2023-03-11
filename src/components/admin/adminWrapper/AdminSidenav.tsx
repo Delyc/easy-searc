@@ -1,20 +1,31 @@
 import React from "react";
 import { sidebarItems } from "@/components/utils/data";
 import Link from "next/link";
+import { logout } from "@/redux/reducers/authSlice";
 import Button from "@/components/ui/Button";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { LogoutIcon } from "@/components/svgs/Icons";
 const AdminSidenav = () => {
+  const dispatch = useDispatch()
   const { userInfo } = useSelector((state: any) => state)
-console.log("test", userInfo)
+  console.log("test", userInfo)
   return (
     <>
-      <div className=" flex flex-col justify-between py-20 w-[16rem] h-screen z-10  bg-primary-blue font-sans border-r border-[#e7e5e5] ">
+
+
+      <div className=" flex flex-col justify-between pb-20 w-80 h-screen z-10  bg-primary-blue font-sans border-r ">
+
+
         <div className="mb-2">
-          <div>
-            <h1>Home</h1>
-            <p>Delyce</p>
+          <Link href="/" className="flex flex-col gap-2 items-center  bg-white/30 py-5 justify-center w-full">
+            <h1 className="text-3xl text-dark-blue font-bold">e~Search</h1>
+            <p className="text-[12px] italic text-dark-blue font-bold">Lost it  | claim it  | get it</p>
+          </Link>
+          <div className="mt-20 px-3">
+
+            <p className="text-white">Delyce</p>
           </div>
-          <ul className=" min:mt-0 pl-4 block mt-6">
+          <ul className=" min:mt-0 px-6 block mt-6">
             {sidebarItems.map((items, index) => {
               return (
                 <li
@@ -23,10 +34,10 @@ console.log("test", userInfo)
                 >
                   <Link
                     href={items.path}
-                    className="is-active focus:text-primary-blue  p-1 flex align-items-center leading-3 cursor-pointer font-semibold hover:font-bold  "
+                    className="is-active focus:text-primary-blue gap-1 p-1 flex items-center leading-3 cursor-pointer font-semibold hover:font-bold"
                   >
-                    <label className="mr-3 p-1 text-[16px]">{items.icon}</label>
-                    <label className="p-1  ">{items.title} </label>
+                    <label>{items.icon}</label>
+                    <label className="p-1 text-white/80 leading-[25px]">{items.title} </label>
                   </Link>
                 </li>
               );
@@ -34,10 +45,10 @@ console.log("test", userInfo)
           </ul>
         </div>
 
-<div className="flex justify-center">
-<Button className="bg-[#252B42] w-1/2 text-white  font-medium rounded" text="Logout"/>
+        <div className="flex justify-center">
+          <Button className="w-1/2 bg-black/60 text-white/80  font-medium rounded" hasIcon={true} icon={<LogoutIcon />} text="Logout" handleClick={() => dispatch(logout())} />
 
-</div>
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,6 @@
+import alerts from '@/components/utils/Alert';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 import { registerUser, userLogin } from '../actions/authActions';
 
 let userToken: string | null = null;
@@ -32,6 +34,7 @@ const authSlice = createSlice({
   reducers: {
     logout: (state) => {
       localStorage.removeItem('userToken'); // delete token from storage
+      toast.info("Logged out successfully")
       state.loading = false;
       state.userInfo = null;
       state.userToken = null;

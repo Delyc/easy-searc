@@ -35,7 +35,6 @@ const Landing = () => {
           </div>
         </div>
       </section>
-      <Button text="Logout" handleClick={() => dispatch(logout())} />
     </>
   );
 }
