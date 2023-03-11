@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import { useState } from "react";
 import { SendIcon } from "@/components/svgs/Icons";
 import { useAddDocMutation } from "@/services/admin/addDocSlice";
+import { toast } from "react-toastify";
 const AddDocument = () => {
 
     const initialData = {
@@ -25,7 +26,7 @@ const AddDocument = () => {
     const handleSubmit = async(e: any) => {
         e.preventDefault()
        await addDocument(addDoc).unwrap().then((payload) => {
-        alert()
+        toast.success("Document added successfully")
        })
        .catch((err) => [
         console.log(err)

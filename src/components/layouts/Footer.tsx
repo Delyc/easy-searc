@@ -2,7 +2,7 @@ import SectionWrapper from "../wrappers/SectionWrapper"
 export default function Footer(){
     return(
         <>
-        <footer className="w-full fixed bottom-0">
+        <footer className="w-full">
             <section className="bg-dark-blue w-full px-8 py-10 ">
        
                 <div className="mx-auto max-w-[80rem]">

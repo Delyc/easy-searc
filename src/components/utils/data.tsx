@@ -80,13 +80,13 @@ export const sidebarItems = [
 export const AdminFormItems = [
     {
         icon: <ProfileIcon />,
-        name: "names",
+        name: "nameOnDoc",
         placeHolder: "Names on card",
         type: "text"
     },
     {
         icon: <AtIcon />,
-        name: "email",
+        name: "phoneEMail",
         placeHolder: "Email",
         type: "email"
     },
