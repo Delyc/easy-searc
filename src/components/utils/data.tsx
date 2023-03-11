@@ -61,7 +61,7 @@ export const navItems = [
 
 export const sidebarItems = [
     {
-        path: "/dashboard",
+        path: "/admin",
         icon: <DashboardIcon />,
         title: "Dashboard",
       },
