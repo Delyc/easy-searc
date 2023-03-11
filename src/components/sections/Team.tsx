@@ -11,7 +11,7 @@ const Team = () => {
             <h2 className="font-bold text-dark-blue text-center text-4xl">Meet the Team</h2>
             <p className="text-gray-text md:w-3/5 text-center tracking-[0.8px]">ALU third year students who have pledged themselves
 to deliver good services to the users </p>
-            <section className="grid grid-cols-1 md:grid-cols-2  w-full px-32">
+            <section className="grid grid-cols-1 md:grid-cols-2  w-full lg:px-32">
 
                 {team.map((member, index) => {
                     return(

@@ -1,6 +1,6 @@
 const Testimony = () => {
     return ( 
-    <div className="px-8 text-gray-800 rounded-lg shadow-md py-10">
+    <div className="px-8 text-gray-800 rounded-lg shadow-md py-5 lg:py-10">
         <div className="mb-2">
             <p className="mb-2 text-center text-gray-600 ">
                 " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "

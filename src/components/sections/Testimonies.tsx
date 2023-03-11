@@ -11,7 +11,7 @@ const Testimonies = () => {
                         <p className="mt-2 text-gray-text tracking-[0.8px]">What others say about us</p>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-10 px-20">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:px-20">
                     <Testimony />
                     <Testimony />
                     <Testimony />

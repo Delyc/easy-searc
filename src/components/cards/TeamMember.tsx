@@ -12,7 +12,7 @@ const TeamMember = ({image, names, position} : Props) => {
             <div className="relative w-[13rem] h-[15rem] rounded-full ">
             <Image src={image} className="absolute  rounded-full" alt="developer profile" layout="fill"/>
             </div>
-            <div className="px-10 py-5 flex flex-col items-center">
+            <div className="lg:px-10 py-5 flex flex-col items-center">
             <p>{names}</p>
             <p className="text-primary-blue font-bold"> ~ <span className="text-gray-text font-normal">{position}</span> </p>
             <div className="flex justify-center gap-5 mt-5 w-full">
