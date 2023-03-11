@@ -5,7 +5,14 @@ import { registerUser } from '../../../redux/actions/authActions'
 import { useRouter } from "next/router";
 import { AppDispatch } from '../../../redux/store'
 import { ThunkDispatch } from 'redux-thunk';
-
+import Image from "next/image";
+import register from '../../../../public/assets/register-org.svg'
+import SectionWrapper from "@/components/wrappers/SectionWrapper";
+import Navbar from "@/components/layouts/Navbar";
+import Input from "@/components/ui/Input";
+import { orgRegisterForm } from "@/components/utils/data";
+import Button from "@/components/ui/Button";
+import Footer from "@/components/layouts/Footer";
 interface LoginPayload {
     email: string,
     password: string
@@ -56,19 +63,35 @@ const RegisterAdmin = () => {
 
     }
     return (
-        <section>
+        <>
+        <Navbar />
+        <SectionWrapper>
+            <section className="mt-44 flex justify-between px-20 mb-28">
+            <div className="">
+                <h1 className="text-gray-text tracking-[1px]">Welcome to</h1>
+                <h1 className="text-5xl text-primary-blue font-medium"> e~Search!</h1>
+                <div className="relative  w-[30rem] h-[30rem]">
+                <Image src={register} alt="man icon" layout="fill" className="absolute"/>
 
-            <form>
-                <input placeholder="org name" name="orgName" onChange={inputHandler} />
-                <input placeholder="org phone" name="phone" onChange={inputHandler} />
-                <input placeholder="org location" name="location" onChange={inputHandler} />
-                <input placeholder="org email" name="email" onChange={inputHandler} />
-                <input placeholder="org password" name="password" onChange={inputHandler} />
+                </div>
+            </div>
+            <form className="flex flex-col gap-3 bg-white shadow-xl px-16 py-16 mt-5 w-2/5">
+                {orgRegisterForm.map((input, index) => {
+                    return(
+                        <div key={index} className="flex items-center px-5 rounded-md border border-gray-border">
+                                    {input.icon}
+                                    <Input placeHolder={input.placeHolder} type={input.type} handleChange={inputHandler} name={input.name} />
+                                </div>
+                    )
 
-                <button onClick={handleSubmit}>send</button>
+                })}
+
+                <Button handleClick={handleSubmit} text="send" className="text-white"/>
             </form>
-
-        </section>
+            </section>
+        </SectionWrapper>
+        <Footer />
+        </>
     );
 }
 

@@ -11,18 +11,13 @@ const AdminSidenav = () => {
   console.log("test", userInfo)
   return (
     <>
-
-
       <div className=" flex flex-col justify-between pb-20 w-80 h-screen z-10  bg-primary-blue font-sans border-r ">
-
-
         <div className="mb-2">
           <Link href="/" className="flex flex-col gap-2 items-center  bg-white/30 py-5 justify-center w-full">
             <h1 className="text-3xl text-dark-blue font-bold">e~Search</h1>
             <p className="text-[12px] italic text-dark-blue font-bold">Lost it  | claim it  | get it</p>
           </Link>
           <div className="mt-20 px-3">
-
             <p className="text-white">Delyce</p>
           </div>
           <ul className=" min:mt-0 px-6 block mt-6">
@@ -44,7 +39,6 @@ const AdminSidenav = () => {
             })}
           </ul>
         </div>
-
         <div className="flex justify-center">
           <Button className="w-1/2 bg-black/60 text-white/80  font-medium rounded" hasIcon={true} icon={<LogoutIcon />} text="Logout" handleClick={() => dispatch(logout())} />
 

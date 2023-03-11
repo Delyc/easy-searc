@@ -115,3 +115,39 @@ export const AdminFormItems = [
     },
 
 ]
+
+
+export const orgRegisterForm = [
+    {
+        icon: <ProfileIcon />,
+        name: "orgName",
+        placeHolder: "Organisation Name",
+        type: "text"
+    },
+    {
+        icon: <PhoneIcon />,
+        name: "phone",
+        placeHolder: "Phone number",
+        type: "number"
+    },
+    {
+        icon: <AtIcon />,
+        name: "Organisation Email",
+        placeHolder: "Your Email",
+        type: "email"
+    },
+    {
+        icon: <PhoneIcon />,
+        name: "location",
+        placeHolder: "Organisation Location",
+        type: "text"
+    },
+
+    {
+        icon: <LocationIcon />,
+        name: "password",
+        placeHolder: "Password",
+        type: "password"
+    },
+
+]

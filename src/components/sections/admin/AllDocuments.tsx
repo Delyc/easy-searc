@@ -6,10 +6,9 @@ const AllDocuments = () => {
     const { data, isLoading, isError } = useFetchDocsQuery()
     return (
         <>
-            <section className=" flex gap-20">
+            <section className="flex">
                 <AdminSidenav />
-                <div className="flex flex-col  w-full px-20  items-center">
-                        <h1>All documents</h1>
+                <div className="flex flex-col  w-full px-20 pt-28">
                         {isLoading && <AvailableDocsSkeleton />}
                         {isError && <h1>Something went wrong</h1>}
                         <table>
