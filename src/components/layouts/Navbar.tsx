@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <header className="w-full border border-b top-0 fixed z-50 bg-white">
             <div className="bg-primary-blue py-3 px-6 xl:px-10 flex justify-end ">
-                <Link href="/" className="text-white font-semibold uppercase">Organization Login</Link>
+                <Link href="/login" className="text-white font-semibold uppercase">Organization Login</Link>
             </div>
             <nav className="w-full flex justify-between items-center">
                 <div className="justify-between w-full px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -57,5 +57,4 @@ const Navbar = () => {
         </header>
     );
 }
-
 export default Navbar;

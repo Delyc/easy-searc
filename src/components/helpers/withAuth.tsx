@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
 
 interface Props {
-  // add any additional props that your wrapped component accepts
 }
 
 const withAuth = (WrappedComponent: React.ComponentType<Props>) => (props: Props) => {

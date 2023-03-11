@@ -1,9 +1,8 @@
 import AllDocuments from "@/components/sections/admin/AllDocuments";
 
 const allDocuments = () => {
-    return ( 
+    return (
         <AllDocuments />
-     );
+    );
 }
- 
 export default allDocuments;

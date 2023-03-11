@@ -45,44 +45,32 @@ const LoginAdmin = () => {
 
     }
     return (
-
         <>
             <Navbar />
             <SectionWrapper>
-                <section className="mt-44 flex justify-between px-20 mb-28">
-
+                <section className="mt-44 md:flex md:flex-row justify-between lg:px-20 mb-28">
                     <div>
                         <h1 className="text-gray-text tracking-[1px]">Welcome</h1>
-                <h1 className="text-5xl text-primary-blue font-medium"> Back!</h1>
-
-                        <div className="relative w-[30rem] h-[20rem]">
-                            <Image src={login} alt="login" layout="fill" className="absolute"/>
+                        <h1 className="text-5xl text-primary-blue font-medium"> Back!</h1>
+                        <div className="relative w-full h-[15rem] md:w-[20rem] md:h-[20rem] lg:w-[30rem] lg:h-[20rem]">
+                            <Image src={login} alt="login" layout="fill" className="absolute" />
                         </div>
-
                     </div>
-
-                    <form className="flex flex-col gap-3 bg-white shadow-xl px-16 py-16 mt-5 w-2/5">
-                    <h1 className="text-gray-text tracking-[1px]">Login here</h1>
-
-                {orgLoginForm.map((input, index) => {
-                    return(
-                        <div key={index} className="flex items-center px-5 rounded-md border border-gray-border">
+                    <form className="flex flex-col gap-3 bg-white shadow-xl px-4 lg:px-16 py-16 mt-5 lg:w-2/5">
+                        <h1 className="text-gray-text tracking-[1px]">Login here</h1>
+                        {orgLoginForm.map((input, index) => {
+                            return (
+                                <div key={index} className="flex items-center px-5 rounded-md border border-gray-border">
                                     {input.icon}
                                     <Input placeHolder={input.placeHolder} type={input.type} handleChange={inputHandler} name={input.name} />
                                 </div>
-                    )
-
-                })}
-
-                <Button handleClick={handleSubmit} text="send" className="text-white"/>
-            </form>
-
+                            )
+                        })}
+                        <Button handleClick={handleSubmit} text="send" className="text-white" />
+                    </form>
                 </section>
             </SectionWrapper>
-
             <Footer />
-
-
         </>
     );
 }

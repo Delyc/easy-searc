@@ -5,13 +5,13 @@ import { logout } from "@/redux/reducers/authSlice";
 import Button from "@/components/ui/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { LogoutIcon } from "@/components/svgs/Icons";
+
 const AdminSidenav = () => {
   const dispatch = useDispatch()
   const { userInfo } = useSelector((state: any) => state)
-  console.log("test", userInfo)
   return (
     <>
-      <div className=" flex flex-col justify-between pb-20 w-80 h-screen z-10  bg-primary-blue font-sans border-r ">
+      <div className=" flex flex-col justify-between pb-20 w-80 h-screen z-10  bg-primary-blue font-sans border-r">
         <div className="mb-2">
           <Link href="/" className="flex flex-col gap-2 items-center  bg-white/30 py-5 justify-center w-full">
             <h1 className="text-3xl text-dark-blue font-bold">e~Search</h1>
@@ -41,7 +41,6 @@ const AdminSidenav = () => {
         </div>
         <div className="flex justify-center">
           <Button className="w-1/2 bg-black/60 text-white/80  font-medium rounded" hasIcon={true} icon={<LogoutIcon />} text="Logout" handleClick={() => dispatch(logout())} />
-
         </div>
       </div>
     </>

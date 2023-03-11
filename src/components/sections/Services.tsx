@@ -9,16 +9,11 @@ const Services = () => {
             <section className="bg-gray-50 py-5 mt-20">
                 <SectionWrapper>
                     <section className="lg:px-8 py-3 mt-10 flex flex-col items-center gap-5 xl:mx-auto xl:max-w-[80%] ">
-
                         <h2 className="font-bold text-dark-blue text-center text-4xl">Our Services</h2>
                         <p className="text-gray-text md:w-3/5 text-center tracking-[0.8px]">Don't remember where you left your documents? Worry less! With our application e~Search, we help you get back your decuments in no time</p>
-
-
                         <div className="flex flex-col gap-10 md:flex  md:flex-row items-center">
                             <div className="relative w-full h-[30vh] md:h-80 md:w-80">
                                 <Image src={one} alt="one" layout="fill" className="absolute" />
-
-
                             </div>
                             <div className="flex flex-col gap-2">
                                 {docs.map((doc, index) => {
@@ -30,8 +25,6 @@ const Services = () => {
                                         </svg>{doc}</p>
                                     )
                                 })}
-
-
                             </div>
                         </div>
                     </section >
@@ -40,5 +33,4 @@ const Services = () => {
         </>
     );
 }
-
 export default Services;

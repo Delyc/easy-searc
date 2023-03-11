@@ -37,7 +37,6 @@ export const formItems = [
         placeHolder: "Location",
         type: "text"
     },
-
 ]
 
 
@@ -54,14 +53,11 @@ export const navItems = [
         name: "Declare doc",
         path: "/declare-doc"
     },
-
-
 ]
-
 
 export const sidebarItems = [
     {
-        path: "/dashboard",
+        path: "/admin",
         icon: <DashboardIcon />,
         title: "Dashboard",
       },
@@ -113,7 +109,6 @@ export const AdminFormItems = [
         placeHolder: "Location",
         type: "text"
     },
-
 ]
 
 
@@ -142,32 +137,26 @@ export const orgRegisterForm = [
         placeHolder: "Organisation Location",
         type: "text"
     },
-
     {
         icon: <LocationIcon />,
         name: "password",
         placeHolder: "Password",
         type: "password"
     },
-
 ]
 
 
 export const orgLoginForm = [
-
     {
         icon: <AtIcon />,
         name: "Organisation Email",
         placeHolder: "Your Email",
         type: "email"
     },
-
-
     {
         icon: <LocationIcon />,
         name: "password",
         placeHolder: "Password",
         type: "password"
     },
-
 ]

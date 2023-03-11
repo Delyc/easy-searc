@@ -1,16 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { logout } from "@/redux/reducers/authSlice";
 import withAuth from "@/components/helpers/withAuth";
 import AdminSidenav from "@/components/admin/adminWrapper/AdminSidenav";
 import { useFetchDocsQuery } from "@/services/admin/addDocSlice";
-import Button from "@/components/ui/Button";
 
 const Landing = () => {
-
   const { data } = useFetchDocsQuery()
-  const { userInfo } = useSelector((state: any) => state.auth)
-  const dispatch = useDispatch()
-
   return (
     <>
       <section className=" flex gap-20">
@@ -38,5 +31,4 @@ const Landing = () => {
     </>
   );
 }
-
 export default withAuth(Landing);

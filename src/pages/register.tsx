@@ -1,10 +1,8 @@
 import RegisterAdmin from "@/components/sections/admin/Register";
 
 const register = () => {
-    return ( 
-      <RegisterAdmin />
-
-     );
+    return (
+        <RegisterAdmin />
+    );
 }
- 
 export default register;
