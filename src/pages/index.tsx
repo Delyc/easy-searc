@@ -5,6 +5,7 @@ import ItemsInfo from '@/components/sections/ItemsInfo'
 import Team from '@/components/sections/Team'
 import Footer from '@/components/layouts/Footer'
 import RegisterAdmin from '../components/sections/admin/Register'
+import { ThunkDispatch } from 'redux-thunk';
 
 
 import { adminLogin } from '@/services/adminLoginThunk'
@@ -14,33 +15,6 @@ import { useEffect, useState } from 'react'
 export default function Home() {
 
 
-
-  const { adminInfo, error, success} = useSelector((state) => state.adminLoginAuth)
-const initialData = {
-  email : '',
-  password : ''
-}
-
-const dispatch = useDispatch()
-const [loginData, setLoginData] = useState(initialData)
-const inputHandler = (e) => {
-  const name = e.target.name
-  const value = e.target.value
-  setLoginData({...loginData, [name] : value})
-  e.preventDefault()
-}
-
-useEffect(() => {
-  if(adminInfo){
-    console.log("logged in")
-
-  }
-}, [adminInfo, success])
-
-const handleSubmit = (e) => {
-  e.preventDefault()
-  dispatch(adminLogin(loginData))
-}
   return (
     <>
       {/* <Navbar />

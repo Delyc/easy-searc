@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
-const withAuth = (WrappedComponent) => (props) => {
+interface Props {
+  // add any additional props that your wrapped component accepts
+}
+
+const withAuth = (WrappedComponent: React.ComponentType<Props>) => (props: Props) => {
   const [hasMounted, setHasMounted] = useState(false);
   const router = useRouter();
   const token = localStorage.getItem("userToken");

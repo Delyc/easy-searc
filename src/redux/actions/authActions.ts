@@ -1,13 +1,18 @@
 import axios from 'axios'
-import { createAsyncThunk } from '@reduxjs/toolkit'
+import { createAsyncThunk, SerializedError } from '@reduxjs/toolkit'
 
 const baseUrl = "https://easy-search-api.onrender.com/api"
 
 // const backendURL = 'http://127.0.0.1:5000'
 
+interface LoginPayload {
+  email: string;
+  password: string;
+}
+
 export const userLogin = createAsyncThunk(
   'user/login',
-  async ({ email, password }, { rejectWithValue }) => {
+  async ({ email, password }: LoginPayload, { rejectWithValue }) => {
     try {
       // configure header's Content-Type as JSON
       const config = {
@@ -34,20 +39,28 @@ export const userLogin = createAsyncThunk(
      
 
       return data
-    } catch (error) {
+    } catch (error: unknown) {
       // return custom error message from API if any
-      if (error.response && error.response.data.message) {
+      if (axios.isAxiosError(error) && error.response && error.response.data.message) {
         return rejectWithValue(error.response.data.message)
       } else {
-        return rejectWithValue(error.message)
+        return rejectWithValue((error as Error).message)
       }
     }
   }
 )
 
+interface RegisterPayload {
+  orgName: string;
+  phone: string;
+  location: string;
+  email: string;
+  password: string;
+}
+
 export const registerUser = createAsyncThunk(
   'user/register',
-  async ({ orgName, phone, location, email, password }, { rejectWithValue }) => {
+  async ({ orgName, phone, location, email, password }: RegisterPayload, { rejectWithValue }) => {
     try {
       const config = {
         headers: {
@@ -55,16 +68,18 @@ export const registerUser = createAsyncThunk(
         },
       }
 
-      await axios.post(
+      const {data} = await axios.post(
         `${baseUrl}/orgs`,
         { orgName, phone, location, email, password },
         config
       )
-    } catch (error) {
-      if (error.response && error.response.data.message) {
+      
+      return data
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error) && error.response && error.response.data.message) {
         return rejectWithValue(error.response.data.message)
       } else {
-        return rejectWithValue(error.message)
+        return rejectWithValue((error as Error).message)
       }
     }
   }
