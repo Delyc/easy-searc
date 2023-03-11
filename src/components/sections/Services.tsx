@@ -14,8 +14,8 @@ const Services = () => {
                         <p className="text-gray-text md:w-3/5 text-center tracking-[0.8px]">Don't remember where you left your documents? Worry less! With our application e~Search, we help you get back your decuments in no time</p>
 
 
-                        <div className="flex flex-col gap-10 lg:flex  lg:flex-row items-center gap-10">
-                            <div className="relative w-full h-[30vh] lg:h-80 lg:w-80">
+                        <div className="flex flex-col gap-10 md:flex  md:flex-row items-center">
+                            <div className="relative w-full h-[30vh] md:h-80 md:w-80">
                                 <Image src={one} alt="one" layout="fill" className="absolute" />
 
 
