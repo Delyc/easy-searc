@@ -16,19 +16,14 @@ export default function Home() {
 
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Hero />
       <HowToSearch />
       <ItemsInfo />
       <Team />
-      <Footer /> */}
-      {/* <form>
-        <input placeholder='email' onChange={inputHandler} name="email"/>
-        <input placeholder='password' onChange={inputHandler}  name="password"/>
-        <button onClick={handleSubmit}>submit</button>
-      </form> */}
+      <Footer />
+  
 
-      <RegisterAdmin />
     </>
   )
 }
