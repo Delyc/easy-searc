@@ -43,8 +43,10 @@ const Navbar = () => {
                                 {navItems.map((navItem, index) => {
                                     return (
                                         <li key={index}>
-                                            <Link href={navItem.path} className={router.pathname === navItem.path ? 'text-dark-blue  font-bold text-xl' : 'text-dark-blue '}>
-                                                {navItem.name}
+                                            <Link href={navItem.path} className={router.pathname === navItem.path ? 'text-dark-blue  font-bold text-xl hover:brightness-200' : 'text-dark-blue m-16 relative group'}>
+                                               <span>
+                                               {navItem.name}</span>
+                                               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary-blue transition-all group-hover:w-full"></span>
                                             </Link>
                                         </li>
                                     )
