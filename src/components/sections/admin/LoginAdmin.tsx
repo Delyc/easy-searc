@@ -12,7 +12,7 @@ import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
 import login from '../../../../public/assets/login.png'
 import Image from "next/image";
-const RegisterAdmin = () => {
+const LoginAdmin = () => {
     const initialData = {
         email: '',
         password: ''
@@ -87,4 +87,4 @@ const RegisterAdmin = () => {
     );
 }
 
-export default RegisterAdmin;
+export default LoginAdmin;
