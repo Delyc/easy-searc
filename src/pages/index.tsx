@@ -4,12 +4,10 @@ import HowToSearch from '@/components/sections/HowToSearch'
 import ItemsInfo from '@/components/sections/ItemsInfo'
 import Team from '@/components/sections/Team'
 import Footer from '@/components/layouts/Footer'
-import RegisterAdmin from '../components/sections/admin/Register'
-import { ThunkDispatch } from 'redux-thunk';
+import Services from '@/components/sections/Services'
+import SectionWrapper from '@/components/wrappers/SectionWrapper'
+import Testimonies from '@/components/sections/Testimonies'
 
-
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
 
 export default function Home() {
 
@@ -18,9 +16,11 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <Services />
       <HowToSearch />
-      <ItemsInfo />
       <Team />
+<Testimonies />
+  
       <Footer />
   
 
