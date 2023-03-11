@@ -27,5 +27,4 @@ const Hero = () => {
         </SectionWrapper>
     );
 }
-
 export default Hero;
