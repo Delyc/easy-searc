@@ -1,17 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { registerAdmin } from '../../../services/admin/actions/adminRegister'
 import { useState, useEffect } from "react";
-import { registerUser, userLogin } from '../../../redux/actions/authActions'
+import { userLogin } from '../../../redux/actions/authActions'
 import { useRouter } from "next/router";
 import { ThunkDispatch } from 'redux-thunk';
 
 const RegisterAdmin = () => {
-
     const initialData = {
         email: '',
         password: ''
     }
-
     const router = useRouter()
     const [loginData, setLoginData] = useState<any>(initialData)
     const inputHandler = (e: any) => {

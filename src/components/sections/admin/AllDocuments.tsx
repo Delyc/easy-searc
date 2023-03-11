@@ -31,7 +31,6 @@ const AllDocuments = () => {
                                             <td>{doc.cardType}</td>
                                             <td>{doc.cardNumber}</td>
                                             <td>{doc.location}</td>
-
                                         </tr>
                                     )
                                 })}
