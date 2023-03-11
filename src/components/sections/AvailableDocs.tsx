@@ -1,14 +1,14 @@
 import { useAvailableDocsQuery } from "@/services/docsApiSlice";
 import Navbar from "../layouts/Navbar";
-import Document from "../cards/Doc";
 import Doc from "../cards/Doc";
+import Footer from "../layouts/Footer";
 import { useState } from "react";
 import SectionWrapper from "../wrappers/SectionWrapper";
 import AvailableDocsSkeleton from "../skeletons/AvailableDocsSkeleton";
 const AvailableDocs = () => {
 
 
-    const { data, isLoading, isError } = useAvailableDocsQuery()
+  const { data, isLoading, isError } = useAvailableDocsQuery()
   const [enteredWord, setEnteredWord] = useState("");
 
     console.log("data", data)
@@ -54,7 +54,7 @@ const AvailableDocs = () => {
      
 
         <SectionWrapper>
-        <section className="flex flex-col gap-10 mt-20">
+        <section className="flex flex-col gap-10 mt-28 mb-20">
 
             <div className="flex justify-end">
                 <input className="border  outline-none px-5 py-2 rounded" placeholder="Search ..." />
@@ -75,6 +75,8 @@ const AvailableDocs = () => {
             </section>
         </section>
         </SectionWrapper>
+
+        <Footer />
         </>
     );
 }

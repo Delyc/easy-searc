@@ -9,19 +9,6 @@ export default function Footer(){
                 
                 <div className='flex justify-between xl:mx-auto xl:max-w-[80%]'>
                 <h3 className="text-white font-bold">Easy Search</h3>
-                {/* <div className='flex gap-3 items-center'>
-                <div className='w-6 h-6'>
-                    <img  className=' object-cover'  src={fb} />
-                    </div>
-                    <div className='w-6 h-6'>
-                    <img  className=' object-cover'  src={ig} />
-                    </div>
-                    <div className='w-6 h-6'>
-                    <img  className=' object-cover'  src={twitter} />
-                    </div>
-                 
-
-                </div> */}
                 </div>
 
                 <div className='h-[0.5px] bg-line-blue mt-5 xl:mx-auto xl:max-w-[80%]'/>

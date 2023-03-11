@@ -6,3 +6,24 @@
 .overlay {
   background: linear-gradient(89.6deg, #0b0b0c 30.69%, rgba(0, 0, 0, 0.2) 99.68%)
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+th{
+  background-color: #ABB8C3;
+}
+
+tr:nth-child(odd) {
+  background-color: #E7F1F9;
+}
