@@ -4,31 +4,26 @@ import HowToSearch from '@/components/sections/HowToSearch'
 import ItemsInfo from '@/components/sections/ItemsInfo'
 import Team from '@/components/sections/Team'
 import Footer from '@/components/layouts/Footer'
-import RegisterAdmin from '../components/sections/admin/Register'
-import { ThunkDispatch } from 'redux-thunk';
+import Services from '@/components/sections/Services'
+import SectionWrapper from '@/components/wrappers/SectionWrapper'
+import Testimonies from '@/components/sections/Testimonies'
 
-
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
 
 export default function Home() {
 
 
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Hero />
+      <Services />
       <HowToSearch />
-      <ItemsInfo />
       <Team />
-      <Footer /> */}
-      {/* <form>
-        <input placeholder='email' onChange={inputHandler} name="email"/>
-        <input placeholder='password' onChange={inputHandler}  name="password"/>
-        <button onClick={handleSubmit}>submit</button>
-      </form> */}
+<Testimonies />
+  
+      <Footer />
+  
 
-      <RegisterAdmin />
     </>
   )
 }
