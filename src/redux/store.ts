@@ -9,7 +9,7 @@ import { authApi } from '../services/admin/authService';
 import authReducer from './reducers/authSlice';
 import { orgDocSlice } from '@/services/admin/addDocSlice';
 import { useDispatch } from 'react-redux'
-
+import orgFetchDocsSlice from './reducers/adminDocsSlice'
 const persistConfig = {
   key: 'root',
   storage,
@@ -26,6 +26,7 @@ export const store = configureStore({
   reducer: {
     persistedReducer,
     auth: authReducer,
+    orgFetchDocsSlice : orgFetchDocsSlice,
     [availableDocsSlice.reducerPath]: availableDocsSlice.reducer,
     [orgDocSlice.reducerPath]: orgDocSlice.reducer,
   },

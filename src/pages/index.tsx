@@ -8,7 +8,6 @@ import RegisterAdmin from '../components/sections/admin/Register'
 import { ThunkDispatch } from 'redux-thunk';
 
 
-import { adminLogin } from '@/services/adminLoginThunk'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 

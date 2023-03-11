@@ -7,10 +7,17 @@ import AdminSidenav from "@/components/admin/adminWrapper/AdminSidenav";
 import Navbar from "@/components/layouts/Navbar";
 import AdminLayout from "@/components/admin/adminWrapper/AdminLayout";
 import Footer from "@/components/layouts/Footer";
+import { useFetchDocsQuery } from "@/services/admin/addDocSlice";
 const Landing = () => {
 
+  const { data, isLoading, isError } = useFetchDocsQuery()
+  console.log(data ?.data.allDocs.length)
+
+
+    const { test } = useSelector((state: any) => state.orgFetchDocsSlice)
     const { userInfo } = useSelector((state: any) => state.auth)
     console.log("userinfo",userInfo)
+    console.log("test", test)
   const dispatch = useDispatch()
     return ( 
         <>
@@ -44,7 +51,7 @@ const Landing = () => {
                 Welcome to your Dashboard
               </h2>
               <h3 className="text-[22px] mb-6 text-[#1b173f] font-normal">
-                <span className="font-medium">10</span> documents in Total
+                <span className="font-medium">{data?.data.allDocs.length}</span> documents in Total
               </h3>
             </div>
           </div>
