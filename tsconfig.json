@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/sections/AvailableDocs.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/sections/AvailableDocs.tsx", "src/services/adminLoginThunk.js", "src/services/admin/adminLoginSlice.js", "src/pages/index.jsx", "src/redux/store.js", "src/components/helpers/withAuth.jsx", "src/services/admin/addDocSlice.js"],
   "exclude": ["node_modules"]
 }

@@ -2,26 +2,13 @@ import SectionWrapper from "../wrappers/SectionWrapper"
 export default function Footer(){
     return(
         <>
-        <footer className="w-full">
+        <footer className="w-full fixed bottom-0">
             <section className="bg-dark-blue w-full px-8 py-10 ">
        
                 <div className="mx-auto max-w-[80rem]">
                 
                 <div className='flex justify-between xl:mx-auto xl:max-w-[80%]'>
                 <h3 className="text-white font-bold">Easy Search</h3>
-                {/* <div className='flex gap-3 items-center'>
-                <div className='w-6 h-6'>
-                    <img  className=' object-cover'  src={fb} />
-                    </div>
-                    <div className='w-6 h-6'>
-                    <img  className=' object-cover'  src={ig} />
-                    </div>
-                    <div className='w-6 h-6'>
-                    <img  className=' object-cover'  src={twitter} />
-                    </div>
-                 
-
-                </div> */}
                 </div>
 
                 <div className='h-[0.5px] bg-line-blue mt-5 xl:mx-auto xl:max-w-[80%]'/>
