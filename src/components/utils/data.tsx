@@ -1,4 +1,4 @@
-import { ProfileIcon, PhoneIcon, AtIcon, LocationIcon, RegDocIcon, DashboardIcon, TwoDocumentsIcon, AddDocument } from "../svgs/Icons"
+import { ProfileIcon, PhoneIcon, AtIcon, LocationIcon, RegDocIcon, DashboardIcon, TwoDocumentsIcon, AddDocument, PasswordIcon } from "../svgs/Icons"
 
 export const formItems = [
     {
@@ -20,13 +20,13 @@ export const formItems = [
         type: "email"
     },
     {
-        icon: <PhoneIcon />,
+        icon: <RegDocIcon />,
         name: "cardType",
         placeHolder: "Card Type e.g Insurance card",
         type: "text"
     },
     {
-        icon: <PhoneIcon />,
+        icon: <RegDocIcon />,
         name: "cardNumber",
         placeHolder: "Card number",
         type: "number"
@@ -132,13 +132,13 @@ export const orgRegisterForm = [
         type: "email"
     },
     {
-        icon: <PhoneIcon />,
+        icon: <LocationIcon />,
         name: "location",
         placeHolder: "Organisation Location",
         type: "text"
     },
     {
-        icon: <LocationIcon />,
+        icon: <PasswordIcon />,
         name: "password",
         placeHolder: "Password",
         type: "password"
@@ -154,7 +154,7 @@ export const orgLoginForm = [
         type: "email"
     },
     {
-        icon: <LocationIcon />,
+        icon: <PasswordIcon />,
         name: "password",
         placeHolder: "Password",
         type: "password"
