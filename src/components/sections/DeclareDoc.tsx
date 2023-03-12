@@ -11,6 +11,7 @@ import { SendIcon } from "../svgs/Icons";
 import Footer from "../layouts/Footer";
 import Input from "../ui/Input";
 import { formItems } from "../utils/data";
+import { toast } from "react-toastify";
 const DeclareDoc = () => {
 
     const initialData = {
@@ -23,20 +24,53 @@ const DeclareDoc = () => {
     }
 
     const [declareDoc, setDeclareDoc] = useState(initialData)
-
+    const [errors, setErrors] = useState({
+        names: "",
+        cardNumber: ""
+    })
     const inputHandler = (e: any) => {
         setDeclareDoc({ ...declareDoc, [e.target.name]: e.target.value });
+        e.preventDefault();
+        switch (e.target.name) {
+            case "names":
+                errors.names = e.target.value.length < 3 ? "Full names must e atleast 3 characters long" : ""
+                break
+            case "cardNumber":
+                errors.cardNumber = e.target.value.length < 5 ? "Atleast 3 numbers" : ""
+                break
+            default:
+                break
+        }
+        setErrors({...errors})
     }
 
+
+    const validateForm = (errors: any) => {
+        let valid = true
+        Object.values(errors).forEach(
+            (val: any) => val.length > 0 && (valid = false)
+        )
+        return valid
+
+    }
     const [declareLostDoc, { isLoading, isError }] = useDeclareLostDocMutation()
     const handleSubmit = async (e: any) => {
         e.preventDefault()
-        await declareLostDoc(declareDoc).unwrap().then((payload) => {
-            alerts()
-        })
-            .catch((err) => {
-                console.log(err)
+        if(validateForm(errors)){
+            await declareLostDoc(declareDoc).unwrap().then((payload) => {
+                console.log("error", errors)
+                alerts()
             })
+                .catch((err) => {
+                console.log("error", errors)
+                    console.log(err)
+                })
+        }else{
+            toast.error(Object.entries(errors).map(([key, value]) => {
+                return value
+            }).join("") || "Invalid form")
+        }
+        
     }
 
 
@@ -54,10 +88,12 @@ const DeclareDoc = () => {
                         <p>Lost it ~ Declare it ~ get it</p>
                     </div>
                     <form className="flex flex-col gap-2 md:w-1/2 lg:w-2/5">
+
                         {formItems.map((formItem, index) => {
                             return (
                                 <div key={index} className="flex items-center px-5 rounded-md border border-gray-border">
                                     {formItem.icon}
+                                    {errors.names === formItem.name ? <span className='text-red-500 text-sm '>{errors.names}</span> : ""}
                                     <Input placeHolder={formItem.placeHolder} type={formItem.type} handleChange={inputHandler} name={formItem.name} />
                                 </div>
                             )
