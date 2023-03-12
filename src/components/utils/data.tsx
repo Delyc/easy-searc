@@ -20,13 +20,13 @@ export const formItems = [
         type: "email"
     },
     {
-        icon: <PhoneIcon />,
+        icon: <RegDocIcon />,
         name: "cardType",
         placeHolder: "Card Type e.g Insurance card",
         type: "text"
     },
     {
-        icon: <PhoneIcon />,
+        icon: <RegDocIcon />,
         name: "cardNumber",
         placeHolder: "Card number",
         type: "number"
