@@ -154,7 +154,7 @@ export const orgLoginForm = [
         type: "email"
     },
     {
-        icon: <LocationIcon />,
+        icon: <PasswordIcon />,
         name: "password",
         placeHolder: "Password",
         type: "password"
