@@ -13,6 +13,7 @@ import Input from "@/components/ui/Input";
 import { orgRegisterForm } from "@/components/utils/data";
 import Button from "@/components/ui/Button";
 import Footer from "@/components/layouts/Footer";
+import { toast } from "react-toastify";
 interface LoginPayload {
     email: string,
     password: string
@@ -38,11 +39,33 @@ const RegisterAdmin = () => {
 
     const router = useRouter()
     const [loginData, setLoginData] = useState(initialData)
+    const [errors, setErrors] = useState({
+        orgName: '',
+        phone: '',
+        location: '',
+        email: '',
+        password: ''
+    })
     const inputHandler = (e: any) => {
         const name = e.target.name
         const value = e.target.value
         setLoginData({ ...loginData, [name]: value })
         e.preventDefault()
+        switch (name) {
+            case " orgName":
+                errors.orgName = value === "" ? "Please provide organisation name" : ""
+                break
+            default: break
+        }
+        setErrors({ ...errors })
+    }
+
+    const validateForm = (errors: any) => {
+        let valid = true
+        Object.values(errors).forEach(
+            (val: any) => val.length > 0 && (valid = false)
+        )
+        return valid
     }
     const { loading, userInfo, error, success } = useSelector(
         (state: any) => state.auth
@@ -59,7 +82,13 @@ const RegisterAdmin = () => {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault()
-        await dispatch(registerUser(loginData))
+        if(validateForm(errors)){
+            await dispatch(registerUser(loginData))
+        } else{
+            toast.error(Object.entries(errors).map(([key, value]) => {
+                return value
+            }).join("") || "Invalid form")
+        }
 
     }
     return (
@@ -75,6 +104,8 @@ const RegisterAdmin = () => {
                         </div>
                     </div>
                     <form className="flex flex-col gap-3 bg-white shadow-xl px-4 lg:px-16 py-16 mt-5 lg:w-2/5">
+                {errors.orgName && <span className='text-red-500 text-sm'>{errors.orgName}</span>}
+                    
                         {orgRegisterForm.map((input, index) => {
                             return (
                                 <div key={index} className="flex items-center px-5 rounded-md border border-gray-border">
