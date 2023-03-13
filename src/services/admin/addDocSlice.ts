@@ -25,7 +25,7 @@ if (typeof window !== 'undefined') {
 }
 
 export const orgDocSlice = createApi({
-  reducerPath: 'availableDocsSlice',
+  reducerPath: 'orgDocSlice',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://easy-search-api.onrender.com/api',
   }),
