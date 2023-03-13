@@ -12,12 +12,9 @@ export default interface DocumentInterface{
                 phoneEMail : string
                 reqDocument : string
         }[]
-
         }
     }
     
-
-
 export const availableDocsSlice = createApi({
   reducerPath: 'availableDocsSlice',
   baseQuery: fetchBaseQuery({

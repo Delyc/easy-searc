@@ -127,7 +127,7 @@ export const orgRegisterForm = [
     },
     {
         icon: <AtIcon />,
-        name: "Organisation Email",
+        name: "email",
         placeHolder: "Your Email",
         type: "email"
     },
@@ -149,7 +149,7 @@ export const orgRegisterForm = [
 export const orgLoginForm = [
     {
         icon: <AtIcon />,
-        name: "Organisation Email",
+        name: "email",
         placeHolder: "Your Email",
         type: "email"
     },
