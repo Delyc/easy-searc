@@ -1,15 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Hero from '@/components/sections/Hero'
+import Navbar from '@/components/layouts/Navbar'
+import HowToSearch from '@/components/sections/HowToSearch'
+import Team from '@/components/sections/Team'
+import Footer from '@/components/layouts/Footer'
+import Services from '@/components/sections/Services'
+import Testimonies from '@/components/sections/Testimonies'
 
 export default function Home() {
   return (
     <>
-      <h1>eSearch</h1>
-      
+      <Navbar />
+      <Hero />
+      <Services />
+      <HowToSearch />
+      <Team />
+      <Testimonies />
+      <Footer />
     </>
   )
 }
