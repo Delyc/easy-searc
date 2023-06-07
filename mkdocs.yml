@@ -1,0 +1,7 @@
+site_name: Easy search docs
+site_url: https://e-searc.netlify.app/
+
+nav:
+    - Home: index.md
+    - Backend: backend.md
+ 
