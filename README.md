@@ -1,3 +1,5 @@
+[![Deploy MkDocs to github pages](https://github.com/Delyc/easy-searc/actions/workflows/mkdocs.yml/badge.svg)](https://github.com/Delyc/easy-searc/actions/workflows/mkdocs.yml)
+
 ## Easy Search
 
 
